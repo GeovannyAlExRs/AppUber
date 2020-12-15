@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "389555278648",
+    "project_id": "appuber-f250f",
+    "storage_bucket": "appuber-f250f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389555278648:android:75ad52c72978a349c227cd",
+        "android_client_info": {
+          "package_name": "com.app.appuber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389555278648-1p2141npacka4bumf9o59c9bu1qpf42u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.appuber",
+            "certificate_hash": "4d84387fe4513cccca4359b0bdf83ee834582d57"
+          }
+        },
+        {
+          "client_id": "389555278648-1b28nafrn2a9kd0j9rlvfjcf07s3ba0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPL6B97wETVxub1I6l_zDJgL4kg26fDro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389555278648-1b28nafrn2a9kd0j9rlvfjcf07s3ba0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
