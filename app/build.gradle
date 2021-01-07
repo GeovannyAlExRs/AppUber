@@ -32,6 +32,20 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:26.1.1')
     implementation 'com.google.firebase:firebase-analytics'
+
+    // Dependency Authentication library
+    implementation platform('com.google.firebase:firebase-bom:26.1.1')
+    implementation 'com.google.firebase:firebase-auth'
+    //implementation 'com.google.firebase:firebase-auth:20.0.1'
+
+    // Dependency Realtime Database library
+    implementation platform('com.google.firebase:firebase-bom:26.1.1')
+    implementation 'com.google.firebase:firebase-database'
+    //implementation 'com.google.firebase:firebase-database:19.5.1'
+
+    // Dependency Progress Android Spinkit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

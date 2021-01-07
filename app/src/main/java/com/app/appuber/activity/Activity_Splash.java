@@ -1,10 +1,12 @@
-package com.app.appuber;
+package com.app.appuber.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.app.appuber.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".activity.RegisterActivity"
     android:background="@drawable/background_gradient">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -67,6 +67,7 @@
                 android:layout_marginLeft="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_txt_namefirts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name_Firts"
@@ -94,6 +95,7 @@
                 android:layout_marginLeft="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_txt_namelast"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name_Last"
@@ -121,37 +123,11 @@
                 android:layout_marginLeft="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_txt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <!-- Linear NOMBRES DE USUARIO-->
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/space8">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/icons8_male_user_100px_1"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/name_User"
-                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -175,6 +151,7 @@
                 android:layout_marginLeft="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/id_txt_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
@@ -194,12 +171,30 @@
             android:layout_gravity="bottom">
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/id_btn_enter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Registrar"
                 android:textColor="@color/colorWhite"
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="@color/colorPrimaryDark"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/id_spinkit_progress"
+                style="@style/SpinKitView.Large.Circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorAccent" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>

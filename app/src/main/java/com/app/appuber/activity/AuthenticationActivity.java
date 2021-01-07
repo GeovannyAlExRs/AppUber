@@ -1,21 +1,27 @@
-package com.app.appuber;
+package com.app.appuber.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.app.appuber.R;
+
 public class AuthenticationActivity extends AppCompatActivity implements View.OnClickListener{
 
     private AppCompatButton ac_btn_login, ac_btn_register, ac_btn_main;
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication);
+
+        sharedPref = getSharedPreferences("typeUser", MODE_PRIVATE);
 
         getViewId();
     }
@@ -37,7 +43,14 @@ public class AuthenticationActivity extends AppCompatActivity implements View.On
                 goToView(LoginActivity.class);
                 break;
             case R.id.id_btn_register:
-                goToView(RegisterActivity.class);
+                String typeUser = sharedPref.getString("user", "");
+                Toast.makeText(this, "Selecciono: " + typeUser, Toast.LENGTH_SHORT).show();
+
+                if (typeUser.equals("client")) {
+                    goToView(RegisterActivity.class);
+                } else if (typeUser.equals("driver")) {
+                    goToView(RegisterActivityDriver.class);
+                }
                 break;
             case R.id.id_btn_main:
                 //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
