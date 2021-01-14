@@ -22,7 +22,7 @@ public class MapDriverActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_map_driver);
 
         getViewId();
-
+        //Aparentemente no subiste el activity del MAPA CONDUCTOR...
         firebaseAuth = new AuthFirebaseProvider();
     }
 
