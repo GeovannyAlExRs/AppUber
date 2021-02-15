@@ -9,10 +9,19 @@ import android.view.View;
 
 import com.app.appuber.R;
 import com.app.appuber.providers.AuthFirebaseProvider;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
 
-public class MapDriverActivity extends AppCompatActivity implements View.OnClickListener {
+public class MapDriverActivity extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback {
 
     private AppCompatButton ac_btn_logout;
+
+    private GoogleMap googleMap;
+    private SupportMapFragment supportMapFragment;
 
     AuthFirebaseProvider firebaseAuth;
 
@@ -24,6 +33,9 @@ public class MapDriverActivity extends AppCompatActivity implements View.OnClick
         getViewId();
 
         firebaseAuth = new AuthFirebaseProvider();
+
+        supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.id_frag_map);
+        supportMapFragment.getMapAsync(this);
     }
 
     private void getViewId() {
@@ -45,5 +57,17 @@ public class MapDriverActivity extends AppCompatActivity implements View.OnClick
         Intent intent = new Intent(this, activiyClass);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void onMapReady(GoogleMap map) {
+        googleMap = map;
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        googleMap.moveCamera(CameraUpdateFactory
+                            .newCameraPosition(new CameraPosition.Builder()
+                                    .target(new LatLng(1.222122, -77.12222))
+                                    .zoom(17f)
+                                    .build()));
     }
 }

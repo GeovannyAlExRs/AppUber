@@ -12,14 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/ic_back_head">
-
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            android:src="@drawable/img_logouber"/>
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -31,16 +24,6 @@
             android:textSize="@dimen/h1"
             android:textStyle="bold"/>
 
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="25dp"
-        android:layout_gravity="center">
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/id_btn_logout"
             android:layout_width="match_parent"
@@ -51,5 +34,11 @@
             android:backgroundTint="@color/colorPrimaryDark"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <fragment
+        android:id="@+id/id_frag_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
