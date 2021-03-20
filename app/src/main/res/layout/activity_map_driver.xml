@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activity.MapClientActivity">
+    tools:context=".activity.MapDriverActivity">
 
     <include layout="@layout/action_bar"/>
 
@@ -15,5 +15,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/id_btn_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conectarse"
+        android:layout_marginTop="@dimen/space24"
+        android:layout_marginBottom="@dimen/space24"
+        android:layout_marginLeft="@dimen/space56"
+        android:layout_marginRight="@dimen/space56"
+        android:layout_gravity="bottom"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_rounded"
+        android:backgroundTint="@color/colorPrimaryDark"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

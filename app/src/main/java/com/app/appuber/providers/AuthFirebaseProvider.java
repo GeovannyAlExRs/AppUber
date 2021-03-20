@@ -23,4 +23,16 @@ public class AuthFirebaseProvider {
     public void logout() {
         firebaseAuth.signOut();
     }
+
+    public String getIdUsers() {
+        return firebaseAuth.getCurrentUser().getUid();
+    }
+
+    public boolean usersExitSession() {
+        boolean session = false;
+        if (firebaseAuth.getCurrentUser() != null) {
+            session = true;
+        }
+        return session;
+    }
 }

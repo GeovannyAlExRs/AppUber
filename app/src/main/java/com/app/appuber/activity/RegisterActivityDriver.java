@@ -79,7 +79,7 @@ public class RegisterActivityDriver extends AppCompatActivity implements View.On
     }
 
     private void goRegister() {
-    // VIDEO PARTE 2 > 04:30
+
         final String namefirts = in_txt_namefirts.getText().toString();
         final String namelast = in_txt_namelast.getText().toString();
         final String email = in_txt_email.getText().toString();

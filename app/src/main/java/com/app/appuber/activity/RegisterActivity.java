@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -106,7 +105,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                     Clients clients = new Clients(id, namefirts, namelast, email, password);
                     createClient(clients);
-                    //saveUser(id, email, nameuser);
                 }else {
                     Toast.makeText(RegisterActivity.this, "Error al registrar usuario", Toast.LENGTH_SHORT).show();
                 }
@@ -120,10 +118,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(RegisterActivity.this, "Cliente registrado correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Conductor registrado correctamente", Toast.LENGTH_SHORT).show();
                     goToView(MapClientActivity.class);
                 }else {
-                    Toast.makeText(RegisterActivity.this, "Error al registrar el Cliente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Error al registrar el Conductor", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -134,37 +132,4 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
-    /*
-    private void saveUser(String id_user, String email, String nameuser) {
-        Users users = new Users();
-        users.setUse_email(email);
-        users.setUse_nameName(nameuser);
-
-        if (typeUser.equals("driver")) {
-
-            databaseReference.child("Users").child("Driver").child(id_user).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(RegisterActivity.this, "Se registro correctamente (Driver) TRUE", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "No se registro correctamente (Driver) FALSE", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-
-        } else if (typeUser.equals("client")) {
-            databaseReference.child("Users").child("Client").child(id_user).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(RegisterActivity.this, "Se registro correctamente (Client) TRUE", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "No se registro correctamente (Client) FALSE", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
-    }
-    */
 }

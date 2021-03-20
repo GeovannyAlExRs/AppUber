@@ -10,7 +10,7 @@ public class MyNewToolbar {
 
     public static void showView(AppCompatActivity activity, String title, boolean upbtn) {
         Toolbar toolbar = activity.findViewById(R.id.toolbar);
-        //activity.getSupportActionBar(toolbar);
+        activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setTitle(title);
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(upbtn);
     }
